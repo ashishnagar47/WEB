@@ -1,0 +1,44 @@
+.container {
+	height: 200px;
+	border: solid;
+	font-family: arial;
+}
+.front {
+	background: red;
+}
+.back {
+	background: dodgerblue;
+}
+.front, .back {
+	height: 100%;
+	/*center the text using flexbox*/
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	/*white text looks better on a coloured background*/
+	color: white;
+	/*better font size*/
+	font-size: 3em;
+}
+.back {
+	transform: rotateY(180deg);
+}
+.container:hover {
+	transform: rotateY(180deg);
+	transition-duration: 2s;
+}
+.container {
+	transition-duration: 2s;
+}
+.front {
+	position: absolute;
+}
+.container {
+	transform-style: preserve-3d;
+}
+.back {
+	/*   opacity:0.5 */
+}
+.front {
+	width: 100%;
+}

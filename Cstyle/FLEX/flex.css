@@ -1,0 +1,19 @@
+#container{
+    height: 3vh;
+    width: 15vh;
+    display: flex;
+    background-color: mediumvioletred;
+    flex-direction: column;
+    border-radius: 5rem;
+    border-color: black;
+}
+
+#container div{
+    height: 5vh;
+    width: 10vh;
+    border-radius: 5rem;
+}
+
+#div1{
+    background-color: wheat;
+}
