@@ -1,0 +1,114 @@
+:root{
+    --speed: 5;
+}
+
+.Game{
+    margin: 50px;
+    height: 75vh;
+    width: 150vh;
+    display: flex;
+    background-color: #5f9ea0;
+    border: solid black;
+}
+
+#heading{
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+.you{
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: blanchedalmond;
+    margin: 60px;
+    height: 60vh;
+    width: 60vh;
+    background-color: rgb(15, 15, 15);
+
+}
+
+.computer{
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: blanchedalmond;
+    margin: 60px;
+    height: 60vh;
+    width: 60vh;
+    background-color: rgb(14, 13, 13);
+}
+
+
+#vs{
+    font-size: 2rem;
+    font-weight: bold;
+    line-height: 500px;
+}
+
+#youflex{
+    margin: auto;
+    height: 40vh;
+    width:50vh;
+    background-color:rgb(103, 141, 223);
+    border: 5px dotted black;
+}
+
+#computerflex{
+    margin: auto;
+    height: 40vh;
+    width:50vh;
+    background-color:rgb(223, 84, 84);
+    border: 5px dotted black;
+}
+
+#rockB{
+    font-size: large;
+    font-weight: bold;
+    height: 40px;
+    margin: 25px;
+    background-color: rgb(25, 0, 255);
+}
+
+#paperB{
+    font-size: large;
+    font-weight: bold;
+    height: 40px;
+    margin: 25px;
+    background-color: rgb(25, 0, 255);
+}
+
+#scissorB{
+    font-size: large;
+    font-weight: bold;
+    height: 40px;
+    margin: 15px;
+    background-color: rgb(25, 0, 255);
+}
+#startB{
+    font-size: large;
+    font-weight: bold;
+    height: 40px;
+    margin: 15px;
+    background-color: rgb(25, 0, 255);
+}
+
+#endB{
+    font-size: large;
+    font-weight: bold;
+    height: 40px;
+    margin: 15px;
+    margin-left:10px;
+    background-color: rgb(25, 0, 255);
+}
+
+#value1{
+    font-size: 150pt;
+    line-height: 250px;
+    text-align: center;
+}
+
+#value2{
+    font-size: 150pt;
+    line-height: 250px;
+    text-align: center;
+}
+

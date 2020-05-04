@@ -1,0 +1,81 @@
+body{
+    margin:0;
+}
+
+#college{
+    background-image: url(./media/Adgitm.jpg);
+    height: 65vh;
+    background-position: center;
+    opacity: 0.6;
+
+}
+
+#header{
+    padding: 00px;
+    font-size: 4rem;
+    font-weight: 1000;
+    color:purple;
+    
+}
+
+.cl{
+    list-style: none;
+}
+
+.cl li{
+    display: inline-block;
+    margin: 0px 200px 80px 0px;
+}
+
+.cl li a{
+    color: rgb(238, 27, 125);
+    text-decoration: none;
+    font-family: 'Times New Roman';
+}
+
+
+#table{
+    background: repeating-linear-gradient(to top right,rgb(149, 199, 187),rgb(207, 222, 236) 10px);
+    margin: 0px;
+    font-size: 1.1rem;
+    color: rgb(216, 33, 103);
+    font-weight: 1000;
+}
+
+#tableF{
+    background: repeating-linear-gradient(to right,rgb(169, 203, 231),rgb(0, 255, 191) 10px);
+    margin: 0px;
+    font-size: 1.1rem;
+    color: rgb(124, 34, 228);
+}
+#form{
+    width: 1000px;
+    background: repeating-linear-gradient(rgb(194, 190, 190),rgb(78, 77, 77));
+}
+
+#faculty{
+    background: repeating-linear-gradient(rgb(255, 153, 0),green,blue,rgb(255, 187, 0));
+    font-size: 1.1rem;
+    color: black;
+    font-weight: bold;
+}
+
+#h1{
+
+    font-size: 3rem;
+    color: rgb(16, 224, 61);
+    font-weight: 1000;
+}
+
+#h2{
+    margin: 20px;
+    font-size: 1.5rem;
+    color: rgb(11, 39, 197);
+    font-weight: 1000;
+}
+
+#about{
+    background: repeating-linear-gradient(to top right, rgb(138, 229, 210),rgb(190, 168, 199) 10px);
+    font-size: 1.1rem;
+    color: rgb(238, 35, 9);
+}

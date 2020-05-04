@@ -1,0 +1,26 @@
+.container{
+    margin: 30px;
+    width: 400px;
+    height:400px;
+    background-color: rgb(230, 163, 215);
+}
+.item{
+    height: 50px;
+    width: 50px;
+    margin: 20px;
+    background-color:rgb(124, 197, 95);
+    border: black;
+    display: inline-block;
+
+    animation: bounce 2s timing-function delay iteration-count direction fill-mode;
+}
+
+.one{
+    animation-timing-function: ease-in;
+}
+.two{
+    animation-timing-function: ease-out;
+}
+.three{
+    animation-timing-function: linear;
+}

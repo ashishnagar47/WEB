@@ -1,0 +1,12 @@
+class.btn{
+   box-sizing: 20px; 
+   background-color: aqua;
+   color: blueviolet;
+   width: 200px;
+}
+
+class :btn :hover{
+    background-color: crimson;
+    transition: 10px,10px;
+}
+

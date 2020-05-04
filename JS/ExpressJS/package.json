@@ -1,0 +1,22 @@
+{
+  "name": "package",
+  "version": "1.0.0",
+  "description": "",
+  "main": "functions.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ashishnagar47/WEBDEV.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ashishnagar47/WEBDEV/issues"
+  },
+  "homepage": "https://github.com/ashishnagar47/WEBDEV#readme",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}
