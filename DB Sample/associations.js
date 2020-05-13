@@ -2,7 +2,7 @@
 const Sequelize=require('sequelize')
 const dataTypes=Sequelize.DataTypes;
 
- const {db} =require('./connection')
+  const {db} =require('./connection')
 
 // const db=new Sequelize('sampledb1','sampleuser1','samplepass1',{
 //     host: 'localhost',

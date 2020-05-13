@@ -9,3 +9,7 @@ db.authenticate()
     .then(()=>console.log("Connection Worked"))
     .catch((err)=>console.error(err))
 
+module.exports={
+    db
+}
+
