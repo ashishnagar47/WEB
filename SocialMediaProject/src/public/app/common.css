@@ -1,0 +1,20 @@
+#footer{
+    position: sticky;
+    padding-top:0.5px;
+    padding-bottom: 0.5px;
+    padding: 1rem;
+    bottom: 0px;
+    background-color:rgb(207, 207, 247);
+    
+}
+
+#navbar{
+    position: sticky;
+    top:0px;
+    background-color:rgb(207, 207, 247);
+    z-index:1;
+}
+
+#contents{
+    /* height: 2000px; */
+}

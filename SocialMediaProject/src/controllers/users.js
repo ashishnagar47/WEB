@@ -6,20 +6,23 @@ async function createAnonUser(){
         username:genRandomUserName()
     })
     return user;
-}
+}createAnonUser()
+.catch((err)=>{
+  console.log(err)
+})
 
-async function getUserbyId(id){
+async function getUserById(id){
   return await Users.findOne({where:{id}})
 }
 
-async function getUserbyUsername(username){
+async function getUserByUsername(username){
   return await Users.findOne({where:{username}})
 }
 
 module.exports={
   createAnonUser,
-  getUserbyId,
-  getUserbyUsername
+  getUserById,
+  getUserByUsername
 }
 
 

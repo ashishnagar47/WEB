@@ -1,26 +1,31 @@
 const {Posts,Users}=require('../db/models');
 
-async function createNewPost(userId,body,title){
+async function createNewPost(userId,title,body){
     const post=await Posts.create({
       userId,
       title,
       body
+    }).catch((err)=>{
+      console.log(err)
     })
     return post;
 }
 
-async function showAllPosts(query){
+async function findAllPosts(query){
   //TODO handling query params
   const posts=await Posts.findAll({
     include:Users
-   } );
+   } ).catch((err)=>{
+    console.log(err)
+  })
   return posts;
 }
 
 module.exports={
   createNewPost,
-  showAllPosts
+  findAllPosts
 }
+
 
 /*
 *showAllPosts{userid:};
@@ -42,11 +47,11 @@ module.exports={
 //         'another title'
 //       )
 //     )
-// 
-// const posts=await showAllPosts()
-//   for(let p of posts){
-//     console.log(`${p.title}\nauthor:${p.user.username}\n${p.body}\n================\n`)
-//   }
+
+// // const posts=await showAllPosts()
+// //   for(let p of posts){
+// //     console.log(`${p.title}\nauthor:${p.user.username}\n${p.body}\n================\n`)
+// //   }
 // }
 //  task()
 

@@ -15,7 +15,7 @@ const COL_ID_DEF={
 
 const COL_USERNAME_DEF={
     type:Sequelize.DataTypes.STRING(30),
-    unique:true,
+    unique:false,
     allowNull:false
 }
 
@@ -34,7 +34,7 @@ const Posts=db.define('post',{
     title:COL_TITLE_DEF,
     body:{
         type:Sequelize.DataTypes.TEXT,
-        allowNull:false
+        allowNull:false,
     }
 
 })

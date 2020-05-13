@@ -5,7 +5,7 @@ const Adjective=[
 ]
 
 const Objects=[
-    'Guitar','Bagpipes','Drum','Tuba','Recorder','Triangle','Crystal'
+        'dog','chicken','tiger','horse','duck','pig','bull'
 ]
 
 function genRandomUserName(){
