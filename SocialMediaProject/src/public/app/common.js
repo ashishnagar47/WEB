@@ -11,6 +11,8 @@ $(() => {
       $.post('/api/users', {}, (user) => {
         if (user) {
           console.log('registered current user as ', user.username)
+          let b=$(user.userId).val()
+          console.log(b)
           window.localStorage.user = JSON.stringify(user)
           currentUser = user
           $('#nav-username').text(currentUser.username)
@@ -18,7 +20,9 @@ $(() => {
       })
     } else {
       console.log('resuming session as ', currentUser.username)
-      console.log($('#nav-username'))
+      //console.log($('#nav-username'))
+      let b=$(currentUser.userId).val()
+      console.log(b)
       $('#nav-username').text(currentUser.username)
     }
   }
