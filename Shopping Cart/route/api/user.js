@@ -1,20 +1,20 @@
-const user=require('../../db').User
+const {User}=require('../../db')
 
-const route=require('express').Router
+const Usr=require('express').Router()
 
-route.get('/',(res,req)=>{
-    user.findAll()
-        .then((user)=>{
-            res.status(200).send(user)
+Usr.get('/',(req,res)=>{
+    User.findAll()
+        .then((users)=>{
+            res.status(200).send(users)
         })
         .catch((err)=>{
             res.status(500).send({
-                err:'could not retrieve user'
+                error:'could not retrieve user'
             })
         })
 })
 
-route.post('/',(res,req)=>{
+Usr.post('/',(req,res)=>{ 
     User.create({
         name:req.body.name
     })
@@ -29,7 +29,5 @@ route.post('/',(res,req)=>{
 })
 
 
-module.exports={
-    route
-}
+module.exports={Usr};
 

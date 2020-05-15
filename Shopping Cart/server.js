@@ -7,7 +7,7 @@ app.use(express.json())
 app.use(express.urlencoded({extended:true}))
 
 app.use('/',express.static(path.join(__dirname,'public')))
-app.use('/', require('./route/api').Route)
+app.use('/api', require('./route/api').route)
 
 app.listen(4567,()=>{
     console.log('server has started')

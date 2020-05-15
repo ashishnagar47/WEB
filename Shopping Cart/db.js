@@ -30,7 +30,8 @@ const Product=db.define('products',{
     allowNull:false
     },
     manufacturer:{
-        type:Sequelize.STRING
+        type:Sequelize.STRING,
+        allowNull:false
     },
     price:{
      type:Sequelize.FLOAT,
@@ -42,7 +43,6 @@ const Product=db.define('products',{
 db.sync()
     .then(()=>console.log("Databse has been synced"))
     .catch((err)=>console.log(err))
-
 module.exports={
     User,Product
 }

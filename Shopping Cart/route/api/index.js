@@ -1,12 +1,10 @@
-const Route=require('express').Router()
+const route=require('express').Router()
 
-const product=require('./product')
-const user=require('./user')
+const {prod}=require('./product')
+const {Usr}=require('./user')
 
-Route.use('/users',user)
+route.use('/users',Usr)
 
-Route.use('/products',product)
+route.use('/products',prod)
 
-module.exports={
-    Route
-}
+module.exports={route};
