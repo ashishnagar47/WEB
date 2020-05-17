@@ -11,6 +11,16 @@ async function createNewPost(userId,title,body){
     return post;
 }
 
+async function addNewPost(title,body){
+      const post=await Posts.create({
+        title,
+        body
+      }).catch((err)=>{
+        console.log(err)
+      })
+      return post;
+}
+
 async function findAllPosts(query){
   //TODO handling query params
   const posts=await Posts.findAll({
@@ -23,7 +33,8 @@ async function findAllPosts(query){
 
 module.exports={
   createNewPost,
-  findAllPosts
+  findAllPosts,
+  addNewPost
 }
 
 

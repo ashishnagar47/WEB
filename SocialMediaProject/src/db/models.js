@@ -7,6 +7,7 @@ const db =new Sequelize({
     password:'cbsocialpass'
 })
 
+
 const COL_ID_DEF={
     type: Sequelize.DataTypes.INTEGER,
     primaryKey:true,

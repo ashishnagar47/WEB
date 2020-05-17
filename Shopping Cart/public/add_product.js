@@ -12,5 +12,14 @@ $(function(){
                 window.alert("Added"+addedProduct.name+'to Database')
             }
         )
+        // function addProduct(name,manuf,price,done){
+        //     $.post('/api/products',{
+        //         name:name,
+        //         manufacturer:manuf,
+        //         price:price
+        //     }),function(data){
+        //         done(data)
+        //     }
+        // }
     })
 })
