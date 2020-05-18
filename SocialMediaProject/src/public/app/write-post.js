@@ -1,12 +1,13 @@
 
 function writePost(){
-    let postTitle=$("#post-title")
-    let postBody=$("#post-body")
+    let postTitle=$("#post-title").val()
+    let postBody=$("#post-body").val()
+    let username=$("#nav-username").val()
 
     $('#btn').click(function(){
         $.post('/api/products',{
-            title:postTitle.val(),
-            body:postBody.val()
+            title:postTitle,
+            body:postBody
         })
         // addNewPost({
         //     title:postTitle.val(),

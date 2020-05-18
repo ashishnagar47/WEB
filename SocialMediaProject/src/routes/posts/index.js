@@ -28,18 +28,18 @@ route.post('/',async(req,res)=>{
 })
 
 
-// route.post('/',async(req,res)=>{
-//     const{userId,title,body}=req.body;
+route.post('/',async(req,res)=>{
+    const{userId,title,body}=req.body;
     
-//     if((!userId)||(!title)||(!body)){
-//         res.status(400).send({
-//             error: 'Need userid, title or body to create post '
-//         })
-//     }
-//     const posts=await createNewPost(userId,title,body)
-//     .catch((err)=>{console.log(err)})
-//     res.status(200).send(posts)
-// })
+    if((!userId)||(!title)||(!body)){
+        res.status(400).send({
+            error: 'Need userid, title or body to create post '
+        })
+    }
+    const posts=await createNewPost(userId,title,body)
+    .catch((err)=>{console.log(err)})
+    res.status(200).send(posts)
+})
 
 module.exports={
     postsRoute:route}

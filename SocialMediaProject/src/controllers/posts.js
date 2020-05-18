@@ -1,4 +1,11 @@
 const {Posts,Users}=require('../db/models');
+const {getUserByUsername}=require('./users')
+
+
+
+async function getid(name){
+  return getUserByUsername(name)
+}
 
 async function createNewPost(userId,title,body){
     const post=await Posts.create({
@@ -11,10 +18,11 @@ async function createNewPost(userId,title,body){
     return post;
 }
 
-async function addNewPost(title,body){
+async function addNewPost(title,body,username){
       const post=await Posts.create({
         title,
-        body
+        body,
+        username
       }).catch((err)=>{
         console.log(err)
       })
@@ -44,18 +52,23 @@ module.exports={
 */
 //Test Code 
 // async function task() {
+
 //     console.log(
-//       await createNewPost(
-//         '1',
-//         'this is a sample post',
-//         'this is a sample title'
-//       )
-//     ),
-//     console.log(
-//       await createNewPost(
-//         '2',
-//         'this is another post',
-//         'another title'
+//     //   await addNewPost(
+//     //     'this is a sample post',
+//     //     'this is a sample title',
+//     //     'crooked-bull'
+//     //   )
+//     // ),
+//     // console.log(
+//     //   await addNewPost(
+        
+//     //     'this is another post',
+//     //     'another title'
+//     //   ),
+
+//       await findUser(
+//         'crooked-bull'
 //       )
 //     )
 
