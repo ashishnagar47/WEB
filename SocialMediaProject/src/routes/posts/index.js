@@ -15,17 +15,17 @@ route.get('/',async(req,res)=>{
 }
 )
 
-route.post('/',async(req,res)=>{
-    const{title,body}=req.body;
-    if((!title)||(!body)){
-        res.status(400).send({
-            error: ' title or body to create post '
-        })
-    }
-    const posts=await addNewPost(title,body)
-    .catch((err)=>{console.log(err)})
-    res.status(200).send(posts)
-})
+// route.post('/',async(req,res)=>{
+//     const{title,body}=req.body;
+//     if((!title)||(!body)){
+//         res.status(400).send({
+//             error: ' title or body to create post '
+//         })
+//     }
+//     const posts=await addNewPost(title,body)
+//     .catch((err)=>{console.log(err)})
+//     res.status(200).send(posts)
+// })
 
 
 route.post('/',async(req,res)=>{

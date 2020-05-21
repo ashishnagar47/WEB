@@ -1,30 +1,23 @@
-<div class="container my-2">
-    <h1 class="h1 text-center">write Post</h1>
-        
-    <!-- Write Post Form -->
-    <form>
-        <div class="form-group">
-          <label for="postTitle">Post Title</label>
-          <input   id="post-title" >
-          <!-- <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small> -->
-        </div>
-        <div class="form-group">
-          <label for="postBody" >Body</label>
-          <br>
-          <!-- <input type="password" class="form-control" id="exampleInputPassword1"> -->
-          <textarea  name="body" id="post-body" cols="100" rows="10"></textarea>
-        </div>
-        
-        <br>
-        <!-- <div class="form-group form-check">
-          <input type="checkbox" class="form-check-input" id="exampleCheck1">
-          <label class="form-check-label" for="exampleCheck1">Check me out</label>
-        </div> -->
-        <button type="submit" class="btn btn-primary my-3 " id="submit">Post</button>
-      </form>
-</div>
 
-<script src='/app/write-post.js'></script>
 
-<script>writePost()</script>
-<!-- <script>loadPost()</script> -->
+ <div class="container my-2">
+
+  <h1 class="h1 text-center">WRITE POST</h1>
+  <form>
+      <div class="form-group">
+          <label for="post-title">Post Title</label>
+          <textarea class="form-control form-control-sm" id="postTitle" rows="3"></textarea>
+      </div>
+      <div class="form-group">
+        <label for="post-body">Post Body</label>
+        <textarea class="form-control form-control-lg" id="postBody" rows="10" cols='100'></textarea>
+      </div>
+      <button type="submit" id="submit" class="btn btn-primary">Submit</button>
+    </form>
+  
+  </div> -->
+  
+   <script src="/app/write-post.js"></script>
+  <script>
+      writePost()
+  </script> 
