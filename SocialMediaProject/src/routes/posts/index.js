@@ -4,7 +4,7 @@ const route=Router()
 
 const {
     createNewPost,
-    addNewPost,
+    findMyPosts,
     findAllPosts
 }=require('../../controllers/posts')
 
@@ -15,17 +15,11 @@ route.get('/',async(req,res)=>{
 }
 )
 
-// route.post('/',async(req,res)=>{
-//     const{title,body}=req.body;
-//     if((!title)||(!body)){
-//         res.status(400).send({
-//             error: ' title or body to create post '
-//         })
-//     }
-//     const posts=await addNewPost(title,body)
-//     .catch((err)=>{console.log(err)})
-//     res.status(200).send(posts)
-// })
+route.get('/:id',async(req,res)=>{
+    const post=await findMyPosts(req.params.id)
+    .catch((err)=>{console.log(err)})
+    res.status(200).send(post)
+})
 
 
 route.post('/',async(req,res)=>{
@@ -37,8 +31,8 @@ route.post('/',async(req,res)=>{
         })
     }
     const posts=await createNewPost(userId,title,body)
-    .catch((err)=>{console.log(err)})
-    res.status(200).send(posts)
+    try{res.status(200).send(posts)}
+    catch{(err)=>{console.log(err)}}
 })
 
 module.exports={

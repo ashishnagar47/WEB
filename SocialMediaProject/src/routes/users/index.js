@@ -20,7 +20,7 @@
         user = await getUserById(req.params.id)
       }
     
-      console.log(user)
+      //console.log(user)
     
       if (user) {
         res.status(200).send(user)

@@ -4,10 +4,14 @@ const socket=require('socket.io')
 
 const app=express()
 const server=http.createServer(app)
-const io=socketio(server)
+const io=socket(server)
 
 io.on('connection',(socket)=>{
   console.log("socketId is",socket.id )
+
+  socket.on('msg_send',(data)=>{
+    console.log('msg_rcvd: ', data.msg)
+  })
 })
 
 app.use('/',express.static(__dirname+'/public'))

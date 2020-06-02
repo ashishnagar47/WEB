@@ -1,11 +1,6 @@
 const {Posts,Users}=require('../db/models');
-const {getUserByUsername}=require('./users')
 
 
-
-async function getid(name){
-  return getUserByUsername(name)
-}
 
 async function createNewPost(userId,title,body){
     const post=await Posts.create({
@@ -18,10 +13,11 @@ async function createNewPost(userId,title,body){
     return post;
 }
 
-async function findMypost(userId){
+async function findMyPosts(id){
   const posts=await Posts.findAll({
-    //include:Users
-   } ).catch((err)=>{
+    include:{model:Users,
+    where:{id:id}
+   }}).catch((err)=>{
     console.log(err)
   })
   return posts;
@@ -40,7 +36,7 @@ async function findAllPosts(query){
 module.exports={
   createNewPost,
   findAllPosts,
-  findMypost
+  findMyPosts
 }
 
 
@@ -52,28 +48,18 @@ module.exports={
 // async function task() {
 
 //     console.log(
-//     //   await addNewPost(
-//     //     'this is a sample post',
-//     //     'this is a sample title',
-//     //     'crooked-bull'
-//     //   )
-//     // ),
-//     // console.log(
-//     //   await addNewPost(
+//       await createNewPost(
+//         '2',
+//         'this is a sample post',
+//         'this is a sample title',
         
-//     //     'this is another post',
-//     //     'another title'
-//     //   ),
-
-//       await findUser(
-//         'crooked-bull'
 //       )
-//     )
+//     )    
 
-// // const posts=await showAllPosts()
-// //   for(let p of posts){
-// //     console.log(`${p.title}\nauthor:${p.user.username}\n${p.body}\n================\n`)
-// //   }
+// const posts=await findMyPosts('2')
+//   for(let p of posts){
+//     console.log(`${p.title}\nauthor:${p.user.username}\n${p.body}\n================\n`)
+//   }
 // }
 //  task()
 

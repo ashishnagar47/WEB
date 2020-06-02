@@ -8,7 +8,7 @@
     align-items: middle;
     justify-content: center;
 }
-
+/* 
 @media(min-width:450px){
     .container{
     width: 65vh;
@@ -27,7 +27,7 @@
         width:200vh;
         flex-wrap: wrap;
     }
-}
+} */
 
 
 .div1:hover{

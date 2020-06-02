@@ -3,6 +3,7 @@ $(() => {
     $('#navbar').load('/components/navbar.html', loginIfNeeded)
     $('#footer').load('/components/footer.html')
     $('#contents').load('/components/all-posts.html') // this contains it's own scripts too
+   // $('#contents').load('/components/myPosts.html')
   })
   
   function loginIfNeeded() {
@@ -22,7 +23,7 @@ $(() => {
       console.log('resuming session as ', currentUser.username)
       //console.log($('#nav-username'))
       let b=$(currentUser.userId).val()
-      console.log(b)
+     // console.log(b)
       $('#nav-username').text(currentUser.username)
     }
   }
