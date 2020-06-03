@@ -1,11 +1,22 @@
 const Sequelize =require ('sequelize')
 
-const db =new Sequelize({
-    dialect:'mysql',
-    database: 'cbsocialmediadb',
-    username:'cbsocialuser',
-    password:'cbsocialpass'
-})
+let  db;
+if(process.env.NODE_ENV == 'testing'){
+    db=new Sequelize({
+        dialect:'sqlite',
+        storage:':memory:'
+        //storage:_dirname+'/../../test/test.db'
+    })
+}
+
+else{
+    db =new Sequelize({
+        dialect:'mysql',
+        database: 'cbsocialmediadb',
+        username:'cbsocialuser',
+        password:'cbsocialpass'
+    })
+}
 
 
 const COL_ID_DEF={

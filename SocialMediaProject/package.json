@@ -4,8 +4,10 @@
   "description": "",
   "main": "server.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node server.js"
+    "test": "cross-env NODE_ENV=testing mocha test/setup.js test/**/*.test.js",
+    "start": "node server.js",
+    "cover":"nyc --reporter=html npm run test"
+    
   },
   "author": "",
   "license": "ISC",
@@ -13,6 +15,13 @@
     "express": "^4.17.1",
     "mysql": "^2.18.1",
     "mysql2": "^2.1.0",
-    "sequelize": "^5.21.7"
+    "sequelize": "^5.21.7",
+    "sqlite3": "^4.2.0"
+  },
+  "devDependencies": {
+    "chai": "^4.2.0",
+    "cross-env": "^7.0.2",
+    "mocha": "^7.2.0",
+    "nyc": "^15.1.0"
   }
 }

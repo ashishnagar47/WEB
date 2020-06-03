@@ -2,14 +2,14 @@ const {Users}=require('../db/models')
 const {genRandomUserName}=require('../utils/username')
 
 async function createAnonUser(){
-  try{
+ // try{
     const user=await Users.create({
         username:genRandomUserName()
     })
     return user;
-  }catch(err){
-    console.log(err)
-  }
+  // catch(err){
+  //   console.log(err)
+  // }
 }
 
 async function getUserById(id){
@@ -28,17 +28,17 @@ module.exports={
 
 
 //Teesting of code 
-async function task(){
-        console.log(await getUserById('2'))
-        console.log('-------------------')
-        console.log(await getUserById('2'))
-        console.log('-------------------')
-        console.log(await getUserById('2'))
-        console.log('-------------------')
-        console.log(await getUserById('2'))
-        console.log('-------------------')
-}task()
-  .catch((err)=>{
-  console.log(err)
-  })
+// async function task(){
+//         console.log(await getUserById('2'))
+//         console.log('-------------------')
+//         console.log(await getUserById('2'))
+//         console.log('-------------------')
+//         console.log(await getUserById('2'))
+//         console.log('-------------------')
+//         console.log(await getUserById('2'))
+//         console.log('-------------------')
+// }task()
+//   .catch((err)=>{
+//   console.log(err)
+//   })
 

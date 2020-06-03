@@ -1,13 +1,13 @@
 const  express=require('express')
 
-const {db}=require('./src/db/models')
+const {db}=require('./db/models')
 const app=express();
 app.use(express.json())
 app.use(express.urlencoded({extended:true}))
 
-const {usersRoute}=require('./src/routes/users')
-const {postsRoute}=require('./src/routes/posts')
-const {commentsRoute}=require('./src/routes/posts/comments')
+const {usersRoute}=require('./routes/users')
+const {postsRoute}=require('./routes/posts')
+const {commentsRoute}=require('./routes/posts/comments')
 
 app.use('/api/users',usersRoute)
 app.use('/api/posts',postsRoute)
