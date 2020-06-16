@@ -3,7 +3,7 @@ let socket=io()
 
 const STARTED=0
 const ENDED=1
-
+let a;
 const playerSpan=document.getElementById('player')
 const gameTable=document.getElementById('game')
 
@@ -90,15 +90,23 @@ function isDiagCaptured(row,col){
 }
 
 function boxClicked(row,col){
-    socket.emit('clicked_on')
+    
     if(game.state===ENDED){
         alert('Restart Game')
         return
     }
     console.log('box clicked = ',row,col)
-
     let clickedBox=gameTable.children[0].children[row-1].children[col-1]
-    clickedBox.textContent=game.turn
+    socket.emit('clicked_box',{
+        click:clickedBox
+    })
+     socket.on('show_clickBox',(data)={
+        a=`${data.click}`
+     })
+
+     a.textContent=game.turn
+   // clickedBox.textContent=game.turn
+
     isRowCaptured(row)
     isColCaptured(col)
     isDiagCaptured(row,col)
