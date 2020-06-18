@@ -27,7 +27,7 @@ const User=db.define('user',{
     
 })
 
-module.exports=db,User;
+module.exports={db,User};
 
 // const mongoose = require('mongoose');
 
@@ -52,4 +52,4 @@ module.exports=db,User;
 
 // const User = mongoose.model('User', UserSchema);
 
-//module.exports = User;
+//qlmodule.exports = User;

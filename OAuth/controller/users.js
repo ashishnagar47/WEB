@@ -1,4 +1,4 @@
-const {User}=require('../models/db')
+const {User}=require('../models/User.js')
 
 
 async function createUser(name,email,password,password2){
