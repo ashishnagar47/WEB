@@ -1,9 +1,9 @@
-const {User}=require('../models/User.js')
+const {User}=require('../models/User')
 
 
-async function createUser(name,email,password,password2){
+async function createUser(username,email,password){
     const user=await User.create({
-        name,email,password,password2
+        username,email,password
     })
     return user
 }
