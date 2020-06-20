@@ -15,18 +15,27 @@ app.use(session({
   secret: '24knb6k247b2k7b2k7bk247hb2kh7b2',
 }))
 
+
+
+app.get('/', (req, res) => {
+  res.render('welcome')
+})
+
 app.get('/signup', (req, res) => {
   res.render('signup')
 })
 
 app.post('/signup', async (req, res) => {
+  console.log(req.body)
   const user = await Users.create({
+  
     username: req.body.username,
+    email: req.body.email,
     password: req.body.password, // NOTE: in production we save hash of password
-    email: req.body.email
   })
-
-  res.status(201).send(`User ${user.id} created`)
+  try{
+  res.status(201).send(`User ${user.id} created`)}
+  catch{(err)=>console.log(err)}
 })
 
 app.get('/login', (req, res) => {
@@ -34,7 +43,7 @@ app.get('/login', (req, res) => {
 })
 
 app.post('/login', async (req, res) => {
-  const user = await Users.findOne({where: { username: req.body.username }})
+  const user = await Users.findOne({where: { email: req.body.email }})
   if (!user) {
     return res.status(404).render('login', { error: 'No such username found' })
   }
@@ -56,7 +65,7 @@ app.get('/profile', async (req, res) => {
 
 app.get('/logout', (req, res) => {
   req.session.userId = null
-  res.redirect('/login')
+  res.redirect('profile')
 })
 
 db.sync()
