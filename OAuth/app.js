@@ -9,7 +9,7 @@ const session = require('express-session');
 const app = express();
 
 //Passport Config
-require('./config/passport')(passport);
+//require('./config/passport')(passport);
 
 // // DB Config
 // const db = require('./config/keys').mongoURI;
@@ -26,6 +26,7 @@ require('./config/passport')(passport);
 // EJS
 app.use(expressLayouts);
 app.set('view engine', 'ejs');
+
 
 // Express body parser
 app.use(express.json())
